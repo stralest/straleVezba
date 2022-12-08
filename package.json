@@ -1,0 +1,26 @@
+{
+  "name": "stralevezba",
+  "version": "1.0.0",
+  "description": "",
+  "main": "strale.js",
+  "scripts": {
+    "test": "mocha --timeout 60000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stralest/straleVezba.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stralest/straleVezba/issues"
+  },
+  "homepage": "https://github.com/stralest/straleVezba#readme",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "chromedriver": "^108.0.0",
+    "mocha": "^10.1.0",
+    "selenium-webdriver": "^4.7.0"
+  }
+}

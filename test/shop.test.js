@@ -30,7 +30,7 @@ describe.only("shop.QA.rs tests", function() {
 
     it.only("google test", async () => {
         await pageGooglePage.goToPage("https://www.google.com");
-        await pageGooglePage.search();
+        await pageGooglePage.search("selenium");
     })
 
 });

@@ -11,7 +11,7 @@ module.exports = class GooglePage {
     await this.#driver.get(url);
     }
 
-    async search(){
-        await this.#driver.findElement(By.name("q")).sendKeys("selenium", Key.ENTER);
+    async search(search){
+        await this.#driver.findElement(By.name("q")).sendKeys(search, Key.ENTER);
     }
 }

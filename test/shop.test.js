@@ -11,14 +11,6 @@ describe.only("shop.QA.rs tests", function() {
     let pageHomepage;
     let pageGooglePage;
 
-    /*before(function() {
-        
-    });*/
-
-    /*after(async function() {
-        
-    });*/
-
     beforeEach(async function() {
         driver = await new Builder().forBrowser("chrome").build();
         pageHomepage = new HomePage(driver);

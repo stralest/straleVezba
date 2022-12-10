@@ -37,7 +37,7 @@ describe.only("shop.QA.rs tests", function() {
         expect(await pageHomepage.isBugListDivDisplayed()).to.be.true;
     });
 
-    it.only("google test", async()=> {
+    it("google test", async()=> {
         pageGooglePage.goToPage();
         pageGooglePage.search();
     })

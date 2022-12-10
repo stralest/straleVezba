@@ -19,6 +19,6 @@ describe('Maths class test', function() {
     });
 
     it('Test if 2 - 1 = 1', function() {
-        assert.equal(Maths.sub(2, 2), 1);
+        assert.equal(Maths.sub(2, 1), 1);
     });
 });

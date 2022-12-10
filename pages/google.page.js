@@ -7,8 +7,8 @@ module.exports = class GooglePage {
     this.#driver = driver;
     }
 
-    async goToPage(){
-    await this.#driver.get("https://www.google.com/");
+    async goToPage(url){
+    await this.#driver.get(url);
     }
 
     async search(){

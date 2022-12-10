@@ -28,8 +28,8 @@ describe.only("shop.QA.rs tests", function() {
         expect(await pageHomepage.isBugListDivDisplayed()).to.be.true;
     });
 
-    it("google test", async () => {
-        await pageGooglePage.goToPage();
+    it.only("google test", async () => {
+        await pageGooglePage.goToPage("https://www.google.com");
         await pageGooglePage.search();
     })
 

@@ -1,7 +1,7 @@
 "use strict";
 
 require("chromedriver");
-const { Builder, By, Key, until } = require("selenium-webdriver");
+const { Builder, By, Key, until, Button } = require("selenium-webdriver");
 const { assert, expect } = require("chai");
 const HomePage = require("../pages/home.page");
 const GooglePage = require("../pages/google.page");
@@ -15,6 +15,7 @@ describe.only("shop.QA.rs tests", function() {
         driver = await new Builder().forBrowser("chrome").build();
         pageHomepage = new HomePage(driver);
         pageGooglePage = new GooglePage(driver);
+        await driver.manage().window().maximize();
     });
 
     afterEach(async function() {
@@ -28,9 +29,8 @@ describe.only("shop.QA.rs tests", function() {
         expect(await pageHomepage.isBugListDivDisplayed()).to.be.true;
     });
 
-    it.only("google test", async () => {
+    it("google test", async () => {
         await pageGooglePage.goToPage("https://www.google.com");
         await pageGooglePage.search("selenium");
     })
-
 });

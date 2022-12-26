@@ -4,8 +4,8 @@ const { By, Key, until } = require("selenium-webdriver");
 module.exports = class HomePage {
     #driver;
 
-    constructor(webdriver) {
-        this.#driver = webdriver;
+    constructor(driver) {
+        this.#driver = driver;
     }
 
     goToPage() {
@@ -55,4 +55,31 @@ module.exports = class HomePage {
     ClickOrderNowButtonStarterPack(){
         return this.#driver.findElement(By.xpath("(//input[@class='btn btn-primary'])[1]")).click();
     }
+
+    getPackageDiv(title){
+    const packageXpath = `//h3[contains(text(), "${title}")]/ancestor::div[contains(@class, "panel")]`;
+    return this.#driver.findElement(By.xpath(packageXpath));
+    }
+
+    getQuantityDropdown(packageDiv){
+    return packageDiv.findElement(By.name("quantity"));
+    }
+
+    getOptions(quantityDropdown){
+    return quantityDropdown.findElements(By.css("option"));
+    }
+
+    getOrderButton(packageDiv){
+    return packageDiv.findElement(By.className("btn btn-primary"));
+    }
+
+    getHeader(){
+        return this.#driver.findElement(By.css("h1"));
+    }
+
+    clickOnViewShoppingCartLink(){
+        const shoppingCart = this.#driver.findElement(By.xpath("//a[@href='/cart']"));
+        shoppingCart.click();
+    }
+
 }
